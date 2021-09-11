@@ -9,7 +9,7 @@ import java.rmi.Naming;
  *
  * @author lucaspauloop
  */
-public class calcuatorClient {
+public class CalculatorClient {
     public static void main(String[] args) {
         try {
             Calculator c = (Calculator) Naming.lookup("rmi://localhost:1099/CalculatorService");
