@@ -23,13 +23,14 @@ public class CovidControlClient {
                 System.out.println("2 - Busca por CPF");
                 System.out.println("3 - total por dia");
                 System.out.println("4 - Sair");
-                
+                op = cliente.nextInt();
                             
                 if (op == 1) {
                     try {
                         System.out.println("\nCadastre de vacinação");
                         System.out.println("\nInforme o nome: ");
                         nome = cliente.next();
+                        if (cliente.hasNextLine()) cliente.nextLine();
                         System.out.println("\nInforme um cpf: ");
                         cpf = cliente.next();
                         System.out.println("\nInforme a idade do paciente: ");
@@ -42,7 +43,7 @@ public class CovidControlClient {
                         dose = cliente.nextInt();
                         System.out.println("\nInforme o lote da vaicna: ");
                         lote = cliente.next();
-                        System.out.println("\nInforme a data da vacina: ");
+                        System.out.println("\nInforme a data da vacina de forma que respeite o padrão dd/mm/aaaa: ");
                         data = cliente.next();
                         response = c.cadastro(nome, cpf, idade, sexo, vacina, dose, lote, data);
                    
